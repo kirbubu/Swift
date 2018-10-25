@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Jumbotron,Button,Navbar,Nav,NavItem,MenuItem,NavDropdown} from 'react-bootstrap';
+import {Jumbotron,Button,Navbar,Nav,NavItem,MenuItem,NavDropdown,Grid,Row,Col} from 'react-bootstrap';
 import Title from './Components/Title';
+import InfoTable from './Components/InfoTable';
 
 class App extends Component {
   render() {
@@ -45,7 +46,17 @@ class App extends Component {
             <Button bsStyle='info' className="Montserrat">Learn more</Button>
           </p>
           </Jumbotron>
-          
+          <Grid>
+            <Row>
+                <Col xs={12} md={4}>
+                <img src="Swiftionary Logo.png" width="100" height="100"/>
+                </Col>
+                <Col xs={12} md={8}>
+                  <InfoTable/>
+                </Col>
+
+            </Row>
+          </Grid>
           <p>
             Swiftionary allows you to search without hassle. No more opening tabs, 
             losing concentration, or skipping over words.
