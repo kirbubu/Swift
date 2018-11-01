@@ -11,21 +11,37 @@ function ThreadComponent(props){
         postStyle:{
             'font-family':'Montserrat',
             'text-align':'left'
+        },
+        imageStyle:{
+            width:105,
+            height:105
         }
     }
+
+    const {data} = props;
     return(
         <tr>
+            
             <td style={styles.titleStyle}>{props.index}</td>
+            
+            <td>
+                {
+                    (data.thumbnail !== "self") ? <img src={data.thumbnail}></img> : <img style={styles.imageStyle} src="Swiftionary Logo.png"></img>
+                }
+            </td>
             <td style={styles.postStyle}>
+            <a href={data.url}>
                 <p>{props.title}</p>
+                </a>
                 <p>{`${props.points} points - ${props.comments} comments - r/${props.subreddit} -Posted by u/${props.user}`}</p>
             </td>
+            
         </tr>
     )
 };
 
 //Data of all the information to be displayed in the UI
-const data= [
+const data2= [
     {
         title:"Hello World",
         points:"4.6k",
@@ -52,7 +68,28 @@ const data= [
 ];
 
 class InfoTable extends Component {
-    render(){ return(
+
+    constructor(props){
+        super(props);
+        this.state= {
+            data : {},
+
+        };
+    }
+
+    async componentDidMount(){
+        const response = await fetch('https://www.reddit.com/r/firefox/.json');
+        const json = await response.json();
+        this.setState({
+            data: json,
+            gotData:true,
+        });
+    }
+
+    render(){ 
+        const {data,gotData} = this.state;
+        console.log(gotData, data);
+        return(
         <Table striped bordered condensed hover>
         <thead>
           <tr>
@@ -63,16 +100,23 @@ class InfoTable extends Component {
         <tbody>
             {
                 // Map takes in anonymous function. The function will return thread components for each index in the array
-                // given the array data. Uses arrow function
-                data.filter(value=> value.comments > 50).map((dataObject,index) =>
+                // given the array data. Uses arrow function | gotData must be true for the filter to render
+                gotData && data.data.children.map((child,index) => {
+                        const {data } =child;
+                        return(
                         <ThreadComponent
                             index={index+1}
-                            title={dataObject.title}
-                            points={dataObject.points}
-                            comments={dataObject.comments}
-                            subreddit={dataObject.subreddit}
-                            user={dataObject.user}
+                            title={data.title}
+                            points={data.score}
+                            comments={data.num_comments}
+                            subreddit={data.subreddit}
+                            user={data.author}
+                            permalink ={data.permalink}
+                            data={data}
+                            thumbnail
                         />
+                        );
+                }
                 )
             }
         </tbody>

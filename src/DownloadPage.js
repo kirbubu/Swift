@@ -6,12 +6,13 @@ import Title from './Components/Title';
 import InfoTable from './Components/InfoTable';
 import MainNav from './Components/MainNav';
 
-class DownloadPage extends Component{
+class DownloadPage extends Component{  
     render(){
         return(
-            <div className="DownloadPage">
+            <div>
                 <header> 
-                    <MainNav/>
+                    {/* <MainNav/> */}   
+                    <p>What's up baboo?</p>
                 </header>
                 
             </div>
