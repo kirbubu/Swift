@@ -5,10 +5,9 @@
     height: auto;
     width: auto;
     font-size: 32;
-    font-weight: bold;
 }
 
-.Paragraph{
+p{
     font-family:'Montserrat';
     height: auto;
     width: auto;
@@ -16,4 +15,25 @@
     font-weight: lighter;
 }
 
+.PanelHeader{
+    font-family:'Montserrat';
+    height: auto;
+    width: auto;
+    font-size:16;
+    margin-top:10px;
+    margin-bottom:5px;
+}
+
+hr{
+    margin:10px;
+}
+
+h1{
+    margin-left:0px
+}
   
+.MainGrid{
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+}

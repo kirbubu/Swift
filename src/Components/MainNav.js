@@ -49,8 +49,8 @@ class MainNav extends Component{
                     About
                 </NavItem>
                 {/* Nav Dropdown Menu for a NavItem option that requires multiple things */}
-                <NavDropdown eventKey={3} title="Help" id="basic-nav-dropdown">
-                    <MenuItem eventKey={3.1}>Frequently Asked Questions</MenuItem>
+                <NavDropdown eventKey={3} title="Help" id="basic-nav-dropdown" className="Montserrat">
+                    <MenuItem eventKey={3.1} href='/user-guide'>Use Guide</MenuItem>
                     <MenuItem eventKey={3.2}>Features</MenuItem>
                     <MenuItem eventKey={3.3}>Customization</MenuItem>
                     <MenuItem divider/>

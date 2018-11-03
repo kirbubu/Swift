@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Route, BrowserRouter} from 'react-router-dom';
 import DownloadPage from './DownloadPage';
+import GuidePage from './GuidePage';
 import MainPage from './MainPage';
 
 
@@ -29,6 +30,7 @@ class Routes extends Component{
                 {/* Create the paths */}
                 <Route exact path='/' component={MainPage}/>
                 <Route exact path='/downloads' component={DownloadPage}/>
+                <Route exact path='/user-guide' component={GuidePage}/>
                 </div>
         </BrowserRouter>
         );

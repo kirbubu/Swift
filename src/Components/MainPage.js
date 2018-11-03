@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import posed from 'react-pose';
+import styled from 'styled-components';
 import logo from './../logo.svg';
 import './../App.css';
 import {Jumbotron,Button,Navbar,Nav,NavItem,MenuItem,NavDropdown,Grid,Row,Col} from 'react-bootstrap';
@@ -6,6 +8,7 @@ import Title from './Title';
 import InfoTable from './InfoTable';
 import MainNav from './MainNav';
 import DownloadPage from './DownloadPage';
+import { tween } from 'popmotion';
 
 /**
  * MainPage Component
@@ -16,7 +19,7 @@ import DownloadPage from './DownloadPage';
  * 
  */
 class MainPage extends Component{
-
+  state = {hovering:false, hovering1:false, hovering2: false};
   render(){
     return(
       <div className="MainPage">
@@ -46,6 +49,22 @@ class MainPage extends Component{
                   components on a dynamic grid. Good for spacing out elements and
                   making the website look well formatted instead of just all the 
                   components on top of each other */}
+                <div className="MainGrid" >
+                <p className="MainText">
+                  Swiftionary allows you to search without hassle. No more opening tabs, 
+                  losing concentration, or skipping over words.
+                </p>
+                <p className="MainText">
+                  <Title title='See how it works.'/>
+                  <p>Swiftionary works in a simple fashion to simplify trivial searches. No typing,
+                    no search bars, just instant results.
+                  </p>
+                  <p>With a plethora of features for users to explore, Swiftionary
+                      allows you to learn different things about the unknown in different
+                      ways.
+                  </p>
+                  
+                </p>
                 <Grid>
                   {/* Creating a row */}
                   <Row>
@@ -57,13 +76,51 @@ class MainPage extends Component{
                         meaning there's 8 left.
                       */}
                       <Col xs={12} md={4}>
-                      <img src="Swiftionary Logo.png" width="100" height="100"/>
+                        <StyledLogo 
+                        pose={this.state.hovering ? "hovered" : "idle"}
+                        onMouseEnter={()=> this.setState({hovering:true})}
+                        onMouseLeave={()=> this.setState({hovering:false})}
+                        >
+                        <div className="PopupBox">
+                            <h2>burlesque</h2>
+                            <hr/>
+                            <p>/ˌbərˈlesk/</p>
+                            <i>noun</i>
+                            <p>an absurd or comically exaggerated imitation of something, especially in a literary or dramatic work; a parody.</p>
+                        </div></StyledLogo>
+                      {/* <img src="Swiftionary Logo.png" width="100" height="100"/> */}
                       </Col>
                       {/* Use up the other eight spaces in the row with a table. It will
                       appear to the right of the logo when wide enough, or below it on mobile
                       due to the lack of space (tables are huge) */}
-                      <Col xs={12} md={8}>
-                        <InfoTable/>
+                      <Col xs={12} md={4}>
+                      <StyledLogo 
+                        pose={this.state.hovering1 ? "hovered" : "idle"}
+                        onMouseEnter={()=> this.setState({hovering1:true})}
+                        onMouseLeave={()=> this.setState({hovering1:false})}
+                        >
+                        <div className="PopupBox">
+                            <h2>moonstruck</h2>
+                            <hr/>
+                            <p>/ˈmo͞onˌstrək/</p>
+                            <i>adjective</i>
+                            <p>unable to think or act normally, especially because of being in love.</p>
+                        </div></StyledLogo>
+                        {/* <InfoTable/> */}
+                      </Col>
+                      <Col xs={12} md={4}>
+                      <StyledLogo 
+                        pose={this.state.hovering2 ? "hovered" : "idle"}
+                        onMouseEnter={()=> this.setState({hovering2:true})}
+                        onMouseLeave={()=> this.setState({hovering2:false})}
+                        >
+                        <div className="PopupBox">
+                            <h2>sibilate</h2>
+                            <hr/>
+                            <p>/ˈsibəˌlāt/</p>
+                            <i>verb</i>
+                            <p>to utter or pronounce with a hissing sound.</p>
+                        </div></StyledLogo>
                       </Col>
                   </Row>
                 </Grid>
@@ -71,22 +128,7 @@ class MainPage extends Component{
                   Most of this information isn't well formatted Needs editing via CSS
                   TODO: Create CS and stylize this part better (put it back in center of page
                   or make smaller) */}
-                <p>
-                  Swiftionary allows you to search without hassle. No more opening tabs, 
-                  losing concentration, or skipping over words.
-                </p>
-                <p>
-                  <Title title='See how it works.'/>
-                  <p>Swiftionary works in a simple fashion to simplify trivial searches. No typing,
-                    no search bars, just instant results.
-                  </p>
-                  <p>With a plethora of features for users to explore, Swiftionary
-                      allows you to learn different things about the unknown in different
-                      ways.
-                  </p>
-                  
-                </p>
-                <p>
+                <p className="MainText"> 
                   <Title title='Choose what you want.'/>
                   <p>Don't like highlighting? Right click on the word to select options.
                     Don't like all the options Swifitonary provides? Choose which ones you 
@@ -98,11 +140,32 @@ class MainPage extends Component{
                     you can always change it up in the settings.
                   </p>
                 </p>
-                
+                </div>
               </header>
             </div>
           );
   }
 }
+
+const SwiftionaryLogo = posed.div({
+  
+  idle: {
+    scale: 1,
+    opacity: 0.75,
+    transition: props=>tween({...props, duration:2000}),
+    background: "#61dafb"
+  },
+  hovered: {
+    scale: 1.25,
+    opacity: 1,
+    transition: props=> tween({...props, duration:1000}),
+    background: "#ffffff"
+  }
+})
+
+const StyledLogo = styled(SwiftionaryLogo)`
+  border-radius:25px;
+  padding:10px;
+`;
 
 export default MainPage;
