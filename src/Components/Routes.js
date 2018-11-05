@@ -25,12 +25,12 @@ class Routes extends Component{
     render(){
         return(
     
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div>
                 {/* Create the paths */}
-                <Route exact path='/sw' component={MainPage}/>
-                <Route exact path='/sw/downloads' component={DownloadPage}/>
-                <Route exact path='/sw/user-guide' component={GuidePage}/>
+                <Route exact path='/' component={MainPage}/>
+                <Route exact path='/downloads' component={DownloadPage}/>
+                <Route exact path='/user-guide' component={GuidePage}/>
                 </div>
         </BrowserRouter>
         );
