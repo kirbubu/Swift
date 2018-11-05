@@ -32,8 +32,12 @@ h1{
     margin-left:0px
 }
   
-.MainGrid{
+.UserGuideGrid{
     justify-content: center;
     justify-self: center;
-    justify-items: center;
+    margin-top:50px;
+    border:solid #ffffff;
+    border-width:15px;
+
 }
+

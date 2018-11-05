@@ -22,7 +22,7 @@ class MainNav extends Component{
         return(
         // Render only returns one component. You cannot return multiple components,
         // if you want to send a multi-faceted component, wrap it within a <div> tag!
-        <div>
+        <div className="fixed-top">
         {/* This is an inline comment. Use Ctrl+/ to easily write
         Javascript comments within html code. Essentially the brackets
         allow you to write Javascript within html code. */}
@@ -38,8 +38,10 @@ class MainNav extends Component{
                     <a href="/" className="Montserrat navbar-padding">
                     Swiftionary</a>
                 </Navbar.Brand>
+                <Navbar.Toggle/>
             {/* New Header created, for Downloads */}
             </Navbar.Header>
+            <Navbar.Collapse>
             <Nav>
                 {/* Wrap the Downloads text for the download page */}
                 <NavItem eventKey={1} href="/downloads" className="Montserrat">
@@ -57,6 +59,7 @@ class MainNav extends Component{
                     <MenuItem eventKey={3.4}>Contact Information</MenuItem>
                 </NavDropdown>
             </Nav>
+            </Navbar.Collapse>
         </Navbar>
         </div>
         )

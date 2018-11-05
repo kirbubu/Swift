@@ -14,7 +14,7 @@ class GuidePage extends Component{
             <div>
                 <header> 
                     
-                    <Grid  className="MainGrid">
+                    <Grid  className="UserGuideGrid">
                         <Row>
                             <h1>Swiftionary User Guide</h1>
                             <Col xs={12} md={4}>

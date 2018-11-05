@@ -77,6 +77,8 @@ function ThreadComponent(props){
  */
 class InfoTable extends Component {
 
+
+    
     // Create a constsructor for the class, where the props come from the original component
     // Data is set equal to a empty object
     constructor(props){
@@ -87,6 +89,7 @@ class InfoTable extends Component {
         };
     }
 
+    
     /**
      * Async ComponentDidMount
      * This is an asynchronous function, which allows other processes to continue while

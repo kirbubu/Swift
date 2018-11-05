@@ -18,6 +18,8 @@ import { tween } from 'popmotion';
  * 
  * 
  */
+
+ 
 class MainPage extends Component{
   state = {hovering:false, hovering1:false, hovering2: false};
   render(){
@@ -65,7 +67,7 @@ class MainPage extends Component{
                   </p>
                   
                 </p>
-                <Grid>
+                <Grid className="MainGrid">
                   {/* Creating a row */}
                   <Row>
                     {/* Column size is actually the row width, or the column width I guess?
