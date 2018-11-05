@@ -30,8 +30,8 @@ class Routes extends Component{
                 <div>
                 {console.log(process.env.PUBLIC_URL)}
                 <Route exact path={process.env.PUBLIC_URL + '/'} component={MainPage}/>
-                <Route path= {process.env.PUBLIC_URL + '/downloads'} component={DownloadPage}/>
-                <Route path={process.env.PUBLIC_URL + '/user-guide'} component={GuidePage}/>
+                <Route exact path= {process.env.PUBLIC_URL + '/downloads'} component={DownloadPage}/>
+                <Route exact path={process.env.PUBLIC_URL + '/user-guide'} component={GuidePage}/>
                 </div>
         </BrowserRouter>
         );
