@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Route, BrowserRouter} from 'react-router-dom';
+import {createBrowserHistory}from 'history';
 import DownloadPage from './DownloadPage';
 import GuidePage from './GuidePage';
 import MainPage from './MainPage';
@@ -25,12 +26,12 @@ class Routes extends Component{
     render(){
         return(
     
-        <BrowserRouter>
+        <BrowserRouter hashHistory={createBrowserHistory()} basename={process.env.PUBLIC_URL}>
                 <div>
                 {/* Create the paths */}
-                <Route path= {process.env.PUBLIC_URL + '/'} component={MainPage}/>
-                <Route path= {process.env.PUBLIC_URL + '/downloads'} component={DownloadPage}/>
-                <Route path= {process.env.PUBLIC_URL+'/user-guide'} component={GuidePage}/>
+                <Route exact path='/' component={MainPage}/>
+                <Route path='/downloads' component={DownloadPage}/>
+                <Route path='/user-guide' component={GuidePage}/>
                 </div>
         </BrowserRouter>
         );
