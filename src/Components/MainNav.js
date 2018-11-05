@@ -30,12 +30,12 @@ class MainNav extends Component{
             {/* Navbar is a bootstrap component */}
             <Navbar.Header>
                 {/*Wrap the image within a link for home page*/}
-                <a href="/" class="navbar-brand">
+                <a href="/sw" class="navbar-brand">
                     <img src="Swiftionary Logo.png" width="25" height="25" alt="Swiftionary"/>
                 </a>
                 <Navbar.Brand>
                     {/* Wrap Swiftioanry text within link for home page */}
-                    <a href="/" className="Montserrat navbar-padding">
+                    <a href="/sw" className="Montserrat navbar-padding">
                     Swiftionary</a>
                 </Navbar.Brand>
                 <Navbar.Toggle/>
@@ -44,7 +44,7 @@ class MainNav extends Component{
             <Navbar.Collapse>
             <Nav>
                 {/* Wrap the Downloads text for the download page */}
-                <NavItem eventKey={1} href="/downloads" className="Montserrat">
+                <NavItem eventKey={1} href="/sw/downloads" className="Montserrat">
                     Download
                 </NavItem>
                 <NavItem eventKey={2} href="#" className="Montserrat">
@@ -52,7 +52,7 @@ class MainNav extends Component{
                 </NavItem>
                 {/* Nav Dropdown Menu for a NavItem option that requires multiple things */}
                 <NavDropdown eventKey={3} title="Help" id="basic-nav-dropdown" className="Montserrat">
-                    <MenuItem eventKey={3.1} href='/user-guide'>Use Guide</MenuItem>
+                    <MenuItem eventKey={3.1} href='/sw/user-guide'>Use Guide</MenuItem>
                     <MenuItem eventKey={3.2}>Features</MenuItem>
                     <MenuItem eventKey={3.3}>Customization</MenuItem>
                     <MenuItem divider/>

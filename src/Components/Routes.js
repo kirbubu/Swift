@@ -28,9 +28,9 @@ class Routes extends Component{
         <BrowserRouter>
                 <div>
                 {/* Create the paths */}
-                <Route exact path='/' component={MainPage}/>
-                <Route exact path='/downloads' component={DownloadPage}/>
-                <Route exact path='/user-guide' component={GuidePage}/>
+                <Route exact path='/sw' component={MainPage}/>
+                <Route exact path='/sw/downloads' component={DownloadPage}/>
+                <Route exact path='/sw/user-guide' component={GuidePage}/>
                 </div>
         </BrowserRouter>
         );
