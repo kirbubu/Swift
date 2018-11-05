@@ -26,12 +26,12 @@ class Routes extends Component{
     render(){
         return(
     
-        <BrowserRouter hashHistory={createBrowserHistory()} basename={process.env.PUBLIC_URL}>
+        <BrowserRouter hashHistory={createBrowserHistory()}>
                 <div>
-                {/* Create the paths */}
-                <Route exact path='/' component={MainPage}/>
-                <Route path='/downloads' component={DownloadPage}/>
-                <Route path='/user-guide' component={GuidePage}/>
+                {console.log(process.env.PUBLIC_URL)}
+                <Route exact path={process.env.PUBLIC_URL + '/'} component={MainPage}/>
+                <Route path= {process.env.PUBLIC_URL + '/downloads'} component={DownloadPage}/>
+                <Route path={process.env.PUBLIC_URL + '/user-guide'} component={GuidePage}/>
                 </div>
         </BrowserRouter>
         );
