@@ -26,7 +26,7 @@ class Routes extends Component{
     render(){
         return(
     
-        <BrowserRouter hashHistory={createBrowserHistory()}>
+        <BrowserRouter>
                 <div>
                 {console.log(process.env.PUBLIC_URL)}
                 <Route exact path={process.env.PUBLIC_URL + '/'} component={MainPage}/>
