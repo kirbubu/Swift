@@ -2,6 +2,11 @@
   "name": "sexy-reddit",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm":"6.4.1",
+    "node":"9.5.0"
+  },
+
   "dependencies": {
     "react": "^16.5.2",
     "react-bootstrap": "^0.32.4",
