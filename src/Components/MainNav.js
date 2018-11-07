@@ -3,7 +3,7 @@ import {Navbar,Nav,NavItem,MenuItem,NavDropdown} from 'react-bootstrap';
 import {Router, Route,Link,hashHistory,BrowserRouter, Switch} from 'react-router-dom';
 import DownloadPage from './DownloadPage';
 import App from './../App';
-import Routes from './Routes';
+import Routes from './Routing';
 
 /**
  * MainNav Component
