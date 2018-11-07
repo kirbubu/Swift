@@ -45,7 +45,7 @@ class MainNav extends Component{
             <Navbar.Collapse>
             <Nav>
                 {/* Wrap the Downloads text for the download page */}
-                <NavItem eventKey={1} href="/downloads" className="Montserrat">
+                <NavItem eventKey={1} href={process.env.PUBLIC_URL + "/downloads"} className="Montserrat">
                     Download
                 </NavItem>
                 <NavItem eventKey={2} href="#" className="Montserrat">
@@ -53,8 +53,8 @@ class MainNav extends Component{
                 </NavItem>
                 {/* Nav Dropdown Menu for a NavItem option that requires multiple things */}
                 <NavDropdown eventKey={3} title="Help" id="basic-nav-dropdown" className="Montserrat">
-                    <MenuItem eventKey={3.1} href='/user-guide'>User Guide</MenuItem>
-                    <MenuItem eventKey={3.2} href='/developer-guide'>Developer Guide</MenuItem>
+                    <MenuItem eventKey={3.1} href={process.env.PUBLIC_URL  + '/user-guide'}>User Guide</MenuItem>
+                    <MenuItem eventKey={3.2} href={process.env.PUBLIC_URL + '/developer-guide'}>Developer Guide</MenuItem>
                     <MenuItem eventKey={3.3}>Features</MenuItem>
                     <MenuItem eventKey={3.4}>Customization</MenuItem>
                     <MenuItem divider/>
