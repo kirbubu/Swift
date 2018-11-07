@@ -38,6 +38,26 @@ h1{
     margin-top:50px;
     border:solid #ffffff;
     border-width:15px;
+}
+
+.ImageAlign{
+    width:100%;
+    justify-content:center;
+    border:solid #ffffff;
+    border-width:25px;
+}
+
+.ImageAlignB{
+    width:50%;
+    height:50%;
+
+    justify-content:center;
 
 }
 
+@font-face{
+    font-family: 'Montserrat';
+    font-style: regular;
+    font-weight:400;
+    src:'../../src/fonts/Montserrat-Regular.otf';
+  }

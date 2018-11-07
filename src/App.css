@@ -92,3 +92,10 @@ h1.Montserrat{
   text-align:center;
 
 }
+
+@font-face{
+  font-family: 'Montserrat';
+  font-style: regular;
+  font-weight:400;
+  src:'src/fonts/Montserrat-Regular.otf';
+}

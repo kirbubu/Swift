@@ -3,6 +3,7 @@ import {Route, BrowserRouter} from 'react-router-dom';
 import DownloadPage from './DownloadPage';
 import GuidePage from './GuidePage';
 import MainPage from './MainPage';
+import DeveloperPage from './DeveloperPage';
 
 
 /**
@@ -31,6 +32,7 @@ class Routes extends Component{
                 <Route exact path='/' component={MainPage}/>
                 <Route exact path='/downloads' component={DownloadPage}/>
                 <Route exact path='/user-guide' component={GuidePage}/>
+                <Route exact path='/developer-guide' component={DeveloperPage}/>
                 </div>
         </BrowserRouter>
         );
