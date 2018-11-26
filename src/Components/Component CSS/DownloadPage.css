@@ -61,3 +61,23 @@ h1{
     font-weight:400;
     src:'../../src/fonts/Montserrat-Regular.otf';
   }
+
+.logo{
+    width:100%;
+    height:100%;
+    justify-content:center;
+}
+
+.DownloadGrid{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top:60px;
+}
+
+.center-justified{
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+}

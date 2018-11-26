@@ -142,6 +142,25 @@ class MainPage extends Component{
                     you can always change it up in the settings.
                   </p>
                 </p>
+                <p className="MainText">
+                  <Title title ='Swift Results, No Distractions.'/>
+                  <p>Swiftionary removes the need of cluttering your browser with tabs when writing
+                     in Google Docs or reading articles online. Instantely on your screen, results
+                     for your searches will appear and go, removing any hassle.
+                  </p>
+                </p>
+
+                <Row>
+                <Col xs={12} md={4}>          
+                <img src="computer_1.png" className="computer"/>
+                </Col>
+                <Col xs={12} md={8}>
+                  <HermitImg>
+                        <img src="hermit_1.png" className="hermit"/>
+                  </HermitImg>
+                </Col>
+                </Row>
+
                 </div>
               </header>
             </div>
@@ -165,9 +184,32 @@ const SwiftionaryLogo = posed.div({
   }
 })
 
+var w = (-(window.innerWidth/15)).toString() + "%";
+console.log(w)
+const Hermit = posed.div({
+  
+  draggable: 'x',
+  dragBounds:{left: w, right:'0%' },
+  init: {scale: 0.95},
+  hover: {scale: 1.1},
+  drag: {scale:1.0},
+  dragEnd: {
+    x:0,
+    y:0,
+    transition: {type : 'spring'}
+    }
+  }
+)
+
+const HermitImg = styled(Hermit)`
+  border-radius:25px;
+  padding:10px;
+`;
+
 const StyledLogo = styled(SwiftionaryLogo)`
   border-radius:25px;
   padding:10px;
 `;
+
 
 export default MainPage;

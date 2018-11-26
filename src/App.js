@@ -13,10 +13,14 @@ import Routes from './Components/Routing';
 class App extends Component {
   render() {
     return (
-      <div>
-        <MainNav></MainNav>
-        <Routes/>
-      </div>
+      <html>
+        <body>
+          <div>
+            <MainNav></MainNav>
+            <Routes/>
+          </div>
+        </body>
+      </html>
     );
   }
 }
