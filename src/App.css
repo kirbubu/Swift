@@ -46,6 +46,16 @@ h1.Montserrat{
   width:100%;
 }
 
+@media screen and (max-width:1440px){
+  .Jumbotron-Container{
+    margin-top:50px;
+  }
+}
+
+.jumbotron p{
+  text-align:center;
+}
+
 .App-header {
   background-color:  rgb(83, 198, 233);
   min-height: 50vh;
@@ -106,6 +116,12 @@ h1.Montserrat{
   width: auto;
   min-height: 100vh;
   min-width: 100vh;
+}
+
+.Montserrat-bold{
+  font-family:'Montserrat';
+  font-style: regular;
+  font-weight:700;
 }
 
 .computer {

@@ -27,7 +27,7 @@ class MainPage extends Component{
       <div className="MainPage">
               <header>      
                 {/* Create a jumbotron component (from bootstrap) */}
-                <Jumbotron className="App-header Container-Fluid">
+                <Jumbotron className="App-header Jumbotron-Container Container-Fluid">
                 {/* Add the swiftionary logo text.
                     alt is a string that will display if the image can't be loaded
                     the class Swiftionary in CSS allows the image to resize as 
@@ -149,18 +149,6 @@ class MainPage extends Component{
                      for your searches will appear and go, removing any hassle.
                   </p>
                 </p>
-
-                <Row>
-                <Col xs={12} md={4}>          
-                <img src="computer_1.png" className="computer"/>
-                </Col>
-                <Col xs={12} md={8}>
-                  <HermitImg>
-                        <img src="hermit_1.png" className="hermit"/>
-                  </HermitImg>
-                </Col>
-                </Row>
-
                 </div>
               </header>
             </div>
