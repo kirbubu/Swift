@@ -27,7 +27,7 @@ class MainPage extends Component{
       <div className="MainPage">
               <header>      
                 {/* Create a jumbotron component (from bootstrap) */}
-                <Jumbotron className="App-header Container-Fluid">
+                <Jumbotron className="App-header Jumbotron-Container Container-Fluid">
                 {/* Add the swiftionary logo text.
                     alt is a string that will display if the image can't be loaded
                     the class Swiftionary in CSS allows the image to resize as 
@@ -142,6 +142,13 @@ class MainPage extends Component{
                     you can always change it up in the settings.
                   </p>
                 </p>
+                <p className="MainText">
+                  <Title title ='Swift Results, No Distractions.'/>
+                  <p className="text-container">Swiftionary removes the need of cluttering your browser with tabs when writing
+                     in Google Docs or reading articles online. Instantely on your screen, results
+                     for your searches will appear and go, removing any hassle.
+                  </p>
+                </p>
                 </div>
               </header>
             </div>
@@ -165,9 +172,32 @@ const SwiftionaryLogo = posed.div({
   }
 })
 
+var w = (-(window.innerWidth/15)).toString() + "%";
+console.log(w)
+const Hermit = posed.div({
+  
+  draggable: 'x',
+  dragBounds:{left: w, right:'0%' },
+  init: {scale: 0.95},
+  hover: {scale: 1.1},
+  drag: {scale:1.0},
+  dragEnd: {
+    x:0,
+    y:0,
+    transition: {type : 'spring'}
+    }
+  }
+)
+
+const HermitImg = styled(Hermit)`
+  border-radius:25px;
+  padding:10px;
+`;
+
 const StyledLogo = styled(SwiftionaryLogo)`
   border-radius:25px;
   padding:10px;
 `;
+
 
 export default MainPage;

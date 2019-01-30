@@ -6,7 +6,7 @@ class Title extends React.Component
     {
         return(
         
-            <h1>{this.props.title}</h1>
+            <h1 className="Montserrat-bold">{this.props.title}</h1>
         );
     }
 
