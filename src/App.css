@@ -152,3 +152,7 @@ h1.Montserrat{
   padding: 30px;
   border: 20px;
 }
+
+.text-container{
+  width:50vmin;
+}

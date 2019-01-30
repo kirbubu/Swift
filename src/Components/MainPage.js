@@ -144,7 +144,7 @@ class MainPage extends Component{
                 </p>
                 <p className="MainText">
                   <Title title ='Swift Results, No Distractions.'/>
-                  <p>Swiftionary removes the need of cluttering your browser with tabs when writing
+                  <p className="text-container">Swiftionary removes the need of cluttering your browser with tabs when writing
                      in Google Docs or reading articles online. Instantely on your screen, results
                      for your searches will appear and go, removing any hassle.
                   </p>
