@@ -8,19 +8,15 @@ import MainNav from './Components/MainNav';
 import DownloadPage from './Components/DownloadPage';
 import MainPage from './Components/MainPage';
 import {BrowserRouter, Route} from 'react-router-dom';
-import Routes from './Components/Routing';
+import Routes from './Components/Routes';
 
 class App extends Component {
   render() {
     return (
-      <html>
-        <body>
-          <div>
-            <MainNav></MainNav>
-            <Routes/>
-          </div>
-        </body>
-      </html>
+      <div>
+        <MainNav></MainNav>
+        <Routes/>
+      </div>
     );
   }
 }

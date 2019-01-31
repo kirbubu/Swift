@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import {Route, BrowserRouter} from 'react-router-dom';
+import {createBrowserHistory}from 'history';
 import DownloadPage from './DownloadPage';
 import GuidePage from './GuidePage';
 import MainPage from './MainPage';
-import DeveloperPage from './DeveloperPage';
 
-import AboutPage from './AboutPage';
 
 /**
  * Routes Component 
@@ -27,14 +26,12 @@ class Routes extends Component{
     render(){
         return(
     
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter>
                 <div>
-                {/* Create the paths */}
-                <Route exact path='/' component={MainPage}/>
-                <Route exact path='/downloads' component={DownloadPage}/>
-                <Route exact path='/user-guide' component={GuidePage}/>
-                <Route exact path='/developer-guide' component={DeveloperPage}/> 
-                <Route exact path={process.env.PUBLIC_URL + '/about'} component={AboutPage}/>
+                {console.log(process.env.PUBLIC_URL)}
+                <Route exact path={process.env.PUBLIC_URL + '/'} component={MainPage}/>
+                <Route exact path= {process.env.PUBLIC_URL + '/downloads'} component={DownloadPage}/>
+                <Route exact path={process.env.PUBLIC_URL + '/user-guide'} component={GuidePage}/>
                 </div>
         </BrowserRouter>
         );

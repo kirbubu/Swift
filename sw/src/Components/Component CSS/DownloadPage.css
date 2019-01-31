@@ -1,0 +1,43 @@
+
+
+.Header{
+    font-family:'Montserrat';
+    height: auto;
+    width: auto;
+    font-size: 32;
+}
+
+p{
+    font-family:'Montserrat';
+    height: auto;
+    width: auto;
+    font-size:16;
+    font-weight: lighter;
+}
+
+.PanelHeader{
+    font-family:'Montserrat';
+    height: auto;
+    width: auto;
+    font-size:16;
+    margin-top:10px;
+    margin-bottom:5px;
+}
+
+hr{
+    margin:10px;
+}
+
+h1{
+    margin-left:0px
+}
+  
+.UserGuideGrid{
+    justify-content: center;
+    justify-self: center;
+    margin-top:50px;
+    border:solid #ffffff;
+    border-width:15px;
+
+}
+
