@@ -48,7 +48,7 @@ class MainNav extends Component{
                 <NavItem eventKey={1} href={process.env.PUBLIC_URL + "/downloads"} className="Montserrat">
                     Download
                 </NavItem>
-                <NavItem eventKey={2} href="#" className="Montserrat">
+                <NavItem eventKey={2} href={process.env.PUBLIC_URL + "/about"} className="Montserrat">
                     About
                 </NavItem>
                 {/* Nav Dropdown Menu for a NavItem option that requires multiple things */}

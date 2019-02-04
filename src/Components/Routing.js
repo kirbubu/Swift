@@ -4,7 +4,7 @@ import DownloadPage from './DownloadPage';
 import GuidePage from './GuidePage';
 import MainPage from './MainPage';
 import DeveloperPage from './DeveloperPage';
-
+import AboutPage from './AboutPage';
 
 /**
  * Routes Component 
@@ -33,6 +33,7 @@ class Routes extends Component{
                 <Route exact path='/downloads' component={DownloadPage}/>
                 <Route exact path='/user-guide' component={GuidePage}/>
                 <Route exact path='/developer-guide' component={DeveloperPage}/>
+                <Route exact path='/about' component={AboutPage}/>
                 </div>
         </BrowserRouter>
         );
