@@ -45,11 +45,8 @@ class MainNav extends Component{
             <Navbar.Collapse>
             <Nav>
                 {/* Wrap the Downloads text for the download page */}
-                <NavItem eventKey={1} href={process.env.PUBLIC_URL + "/downloads"} className="Montserrat">
+                <NavItem eventKey={1} href="https://chrome.google.com/webstore/detail/swiftionary/anloikgehmbfmcbgdbgdncjhpdmcbbej" className="Montserrat">
                     Download
-                </NavItem>
-                <NavItem eventKey={2} href="#" className="Montserrat">
-                    About
                 </NavItem>
                 {/* Nav Dropdown Menu for a NavItem option that requires multiple things */}
                 <NavDropdown eventKey={3} title="Help" id="basic-nav-dropdown" className="Montserrat">
