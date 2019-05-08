@@ -23,7 +23,7 @@ class MainPage extends Component {
           <Jumbotron className="jumbo">
             <img src="Swiftionary Text.png" alt="Swiftionary" />
             <p>A simple way to search and learn.</p>
-            <Button variant="outline-primary" size="large">Download</Button>
+            <Button variant="outline-primary" href="https://chrome.google.com/webstore/detail/swiftionary/anloikgehmbfmcbgdbgdncjhpdmcbbej "size="large">Download</Button>
           </Jumbotron>
           <Jumbotron className="info-jumbo">
             <Grid>
